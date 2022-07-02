@@ -3,9 +3,14 @@ package mailbox.core.domain;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Getter
 @RequiredArgsConstructor
@@ -24,6 +29,17 @@ public class Letters {
 
     @Column(nullable = false)
     private String name;
+
+    @CreatedDate
+    @Column
+    @Convert(converter = Jsr310JpaConverters.LocalDateTimeConverter.class)
+    private LocalDateTime createDate;
+
+    @LastModifiedDate
+    @Column
+    @Convert(converter = Jsr310JpaConverters.LocalDateTimeConverter.class)
+    private LocalDateTime updateDate;
+
 
     @Builder
     public Letters(String title, String content, String name){

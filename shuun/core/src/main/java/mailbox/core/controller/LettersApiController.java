@@ -3,7 +3,6 @@ package mailbox.core.controller;
 import lombok.RequiredArgsConstructor;
 import mailbox.core.dto.request.LettersSaveRequestDto;
 import mailbox.core.dto.request.LettersUpdateRequestDto;
-import mailbox.core.dto.response.LettersListResponseDto;
 import mailbox.core.dto.response.LettersResponseDto;
 import mailbox.core.service.LettersService;
 import org.springframework.ui.Model;
