@@ -15,5 +15,6 @@ public class LettersResponseDto {
         this.title = entity.getTitle();
         this.content = entity.getContent();
         this.name = entity.getName();
+
     }
 }
