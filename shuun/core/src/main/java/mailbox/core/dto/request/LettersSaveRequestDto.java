@@ -10,20 +10,21 @@ import mailbox.core.domain.Letters;
 public class LettersSaveRequestDto {
     private String title;
     private String content;
-    private Long recipientIdx;
+
+    private String name;
 
     @Builder
-    public LettersSaveRequestDto(String title, String content, Long recipientIdx){
+    public LettersSaveRequestDto(String title, String content, String name){
         this.title = title;
         this.content = content;
-        this.recipientIdx = recipientIdx;
+        this.name = name;
     }
 
     public Letters toEntity(){
         return Letters.builder()
                 .title(title)
                 .content(content)
-                .recipientIdx(recipientIdx)
+                .name(name)
                 .build();
     }
 

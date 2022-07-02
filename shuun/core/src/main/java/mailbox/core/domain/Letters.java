@@ -23,20 +23,20 @@ public class Letters {
     private String content;
 
     @Column(nullable = false)
-    private Long recipientIdx;
+    private String name;
 
     @Builder
-    public Letters(String title, String content, Long recipientIdx){
+    public Letters(String title, String content, String name){
         this.title = title;
         this.content = content;
-        this.recipientIdx = recipientIdx;
+        this.name = name;
 
     }
 
-    public void update(String title, String content, Long recipientIdx){
+    public void update(String title, String content, String name){
         this.title = title;
         this.content = content;
-        this.recipientIdx = recipientIdx;
+        this.name = name;
     }
 
 

@@ -28,7 +28,7 @@ public class LettersService {
         Letters letters = lettersRepository.findById(letterIdx).orElseThrow(() ->
                 new IllegalArgumentException("해당 게시글을 찾을 수 없습니다. id = " + letterIdx));
 
-        letters.update(requestDto.getTitle(), requestDto.getContent(), requestDto.getRecipientIdx());
+        letters.update(requestDto.getTitle(), requestDto.getContent(), requestDto.getName());
 
         return letterIdx;
     }
