@@ -37,31 +37,31 @@ public class LettersApiControllerTest {
         lettersRepository.deleteAll();
     }
 
-    @Test
-    public void 등록() throws Exception{
-        //given
-        String title = "title";
-        String content = "content";
-        Long recipientIdx = 1L;
-        LettersSaveRequestDto requestDto = LettersSaveRequestDto.builder()
-                .title(title)
-                .content(content)
-                .recipientIdx(recipientIdx)
-                .build();
-
-        String url = "http://localhost:" + port + "/letters";
-
-        //when
-        ResponseEntity<Long> responseEntity = restTemplate.postForEntity(url, requestDto, Long.class);
-
-        //then
-        Assertions.assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
-        Assertions.assertThat(responseEntity.getBody()).isGreaterThan(0L);
-
-
-        List<Letters> all = lettersRepository.findAll();
-        Assertions.assertThat(all.get(0).getTitle()).isEqualTo(title);
-        Assertions.assertThat(all.get(0).getContent()).isEqualTo(content);
-    }
+//    @Test
+//    public void 등록() throws Exception{
+//        //given
+//        String title = "title";
+//        String content = "content";
+//        Long recipientIdx = 1L;
+//        LettersSaveRequestDto requestDto = LettersSaveRequestDto.builder()
+//                .title(title)
+//                .content(content)
+//                .recipientIdx(recipientIdx)
+//                .build();
+//
+//        String url = "http://localhost:" + port + "/letters";
+//
+//        //when
+//        ResponseEntity<Long> responseEntity = restTemplate.postForEntity(url, requestDto, Long.class);
+//
+//        //then
+//        Assertions.assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
+//        Assertions.assertThat(responseEntity.getBody()).isGreaterThan(0L);
+//
+//
+//        List<Letters> all = lettersRepository.findAll();
+//        Assertions.assertThat(all.get(0).getTitle()).isEqualTo(title);
+//        Assertions.assertThat(all.get(0).getContent()).isEqualTo(content);
+//    }
 
 }
