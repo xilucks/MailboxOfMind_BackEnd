@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 @Getter
 @RequiredArgsConstructor
 @Entity
-public class Letters {
+public class Letters extends BaseTimeEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,13 +31,11 @@ public class Letters {
     private String name;
 
     @CreatedDate
-    @Column
-    @Convert(converter = Jsr310JpaConverters.LocalDateTimeConverter.class)
+    @Column(updatable = false)
     private LocalDateTime createDate;
 
     @LastModifiedDate
     @Column
-    @Convert(converter = Jsr310JpaConverters.LocalDateTimeConverter.class)
     private LocalDateTime updateDate;
 
 
