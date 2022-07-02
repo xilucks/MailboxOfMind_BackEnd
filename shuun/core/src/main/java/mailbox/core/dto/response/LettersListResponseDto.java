@@ -1,7 +1,9 @@
 package mailbox.core.dto.response;
 
+import lombok.Data;
 import mailbox.core.domain.Letters;
 
+@Data
 public class LettersListResponseDto {
     private Long letterIdx;
     private String title;

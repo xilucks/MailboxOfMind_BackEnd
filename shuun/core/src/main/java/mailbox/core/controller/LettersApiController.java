@@ -1,8 +1,10 @@
 package mailbox.core.controller;
 
 import lombok.RequiredArgsConstructor;
+import mailbox.core.config.BaseResponse;
 import mailbox.core.dto.request.LettersSaveRequestDto;
 import mailbox.core.dto.request.LettersUpdateRequestDto;
+import mailbox.core.dto.response.LettersListResponseDto;
 import mailbox.core.dto.response.LettersResponseDto;
 import mailbox.core.service.LettersService;
 import org.springframework.ui.Model;
@@ -16,10 +18,11 @@ public class LettersApiController {
 
     private final LettersService lettersService;
 
+    @ResponseBody
     @GetMapping("/letters")
-    public String index(Model model){
-        model.addAttribute("letters", lettersService.findAllDesc());
-        return "index";
+    public BaseResponse<List<LettersListResponseDto>> index(){
+        List<LettersListResponseDto> letters = lettersService.findAllDesc();
+        return new BaseResponse<>(letters);
     }
 
     @PostMapping("/letters")
