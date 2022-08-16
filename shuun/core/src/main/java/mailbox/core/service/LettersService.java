@@ -28,17 +28,13 @@ public class LettersService {
         Letters letters = lettersRepository.findById(letterIdx).orElseThrow(() ->
                 new IllegalArgumentException("해당 게시글을 찾을 수 없습니다. id = " + letterIdx));
 
-        letters.update(requestDto.getTitle(), requestDto.getContent(), requestDto.getName());
-        System.out.println("생성 : " + letters.getCreateDate());
-        System.out.println("수정 : " + letters.getUpdateDate());
-
         return letterIdx;
     }
 
     public LettersResponseDto findById(Long letterIdx){
         Letters entity = lettersRepository.findById(letterIdx).orElseThrow(() ->
                 new IllegalArgumentException("해당 게시글을 찾을 수 없습니다. id = " + letterIdx));
-        System.out.println("생성 : " + entity.getCreateDate());
+
         return new LettersResponseDto(entity);
 
     }

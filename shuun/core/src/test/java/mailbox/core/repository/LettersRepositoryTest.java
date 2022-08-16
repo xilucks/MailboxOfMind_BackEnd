@@ -30,12 +30,12 @@ public class LettersRepositoryTest {
         //given
         String title = "편지 제목";
         String content = "편지 내용";
-        String name = "수신자 이름";
+        Long recipientIdx = 1L;
 
         lettersRepository.save(Letters.builder()
                 .title(title)
                 .content(content)
-                .name(name)
+                .recipientIdx(1L)
                 .build()
         );
 

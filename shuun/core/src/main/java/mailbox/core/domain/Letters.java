@@ -3,19 +3,14 @@ package mailbox.core.domain;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedBy;
-import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Getter
 @RequiredArgsConstructor
 @Entity
-public class Letters extends BaseTimeEntity{
+public class Letters {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,29 +23,20 @@ public class Letters extends BaseTimeEntity{
     private String content;
 
     @Column(nullable = false)
-    private String name;
-
-    @CreatedDate
-    @Column(updatable = false)
-    private LocalDateTime createDate;
-
-    @LastModifiedDate
-    @Column
-    private LocalDateTime updateDate;
-
+    private Long recipientIdx;
 
     @Builder
-    public Letters(String title, String content, String name){
+    public Letters(String title, String content, Long recipientIdx){
         this.title = title;
         this.content = content;
-        this.name = name;
+        this.recipientIdx = recipientIdx;
 
     }
 
-    public void update(String title, String content, String name){
+    public void update(String title, String content, Long recipientIdx){
         this.title = title;
         this.content = content;
-        this.name = name;
+        this.recipientIdx = recipientIdx;
     }
 
 
