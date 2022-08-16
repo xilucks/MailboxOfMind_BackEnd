@@ -8,13 +8,12 @@ public class LettersResponseDto {
     private Long letterIdx;
     private String title;
     private String content;
-    private String name;
+    private Long recipientIdx;
 
     public LettersResponseDto(Letters entity){
         this.letterIdx = entity.getLetterIdx();
         this.title = entity.getTitle();
         this.content = entity.getContent();
-        this.name = entity.getName();
-
+        this.recipientIdx = entity.getRecipientIdx();
     }
 }

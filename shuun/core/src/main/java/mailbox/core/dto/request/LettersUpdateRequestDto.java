@@ -9,13 +9,13 @@ import lombok.NoArgsConstructor;
 public class LettersUpdateRequestDto {
     private String title;
     private String content;
-    private String name;
+    private Long recipientIdx;
 
     @Builder
-    public LettersUpdateRequestDto(String title, String content, String name){
+    public LettersUpdateRequestDto(String title, String content, Long recipientIdx){
         this.title = title;
         this.content = content;
-        this.name = name;
+        this.recipientIdx = recipientIdx;
 
     }
 
