@@ -1,6 +1,6 @@
 package mailbox.core.repository;
 
-import mailbox.core.domain.Letters;
+import mailbox.core.domain.Letter;
 import org.assertj.core.api.Assertions;
 import org.junit.After;
 import org.junit.Test;
@@ -32,19 +32,19 @@ public class LettersRepositoryTest {
         String content = "편지 내용";
         Long recipientIdx = 1L;
 
-        lettersRepository.save(Letters.builder()
+        lettersRepository.save(Letter.builder()
                 .title(title)
                 .content(content)
-                .recipientIdx(1L)
+                .recipient(1L)
                 .build()
         );
 
         //when
-        List<Letters> lettersList = lettersRepository.findAll();
+        List<Letter> lettersList = lettersRepository.findAll();
 
 
         //then
-        Letters letters = lettersList.get(0);
+        Letter letters = lettersList.get(0);
         Assertions.assertThat(letters.getTitle()).isEqualTo(title);
         Assertions.assertThat(letters.getContent()).isEqualTo(content);
     }

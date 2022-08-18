@@ -1,19 +1,19 @@
 package mailbox.core.dto.response;
 
 import lombok.Getter;
-import mailbox.core.domain.Letters;
+import mailbox.core.domain.Letter;
 
 @Getter
 public class LettersResponseDto {
     private Long letterIdx;
     private String title;
     private String content;
-    private Long recipientIdx;
+    private Long recipient;
 
-    public LettersResponseDto(Letters entity){
+    public LettersResponseDto(Letter entity){
         this.letterIdx = entity.getLetterIdx();
         this.title = entity.getTitle();
         this.content = entity.getContent();
-        this.recipientIdx = entity.getRecipientIdx();
+        this.recipient = entity.getRecipient();
     }
 }

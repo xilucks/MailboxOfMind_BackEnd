@@ -28,6 +28,10 @@ public class Message extends BaseTimeEntity{
     private Long letterIdx;
 
     @ManyToOne
+    @JoinColumn(name="senderIdx")
+    private User user;
+
+    @ManyToOne
     @JoinColumn(name="letterIdx")
     private Letter letter;
 

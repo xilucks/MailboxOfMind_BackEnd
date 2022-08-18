@@ -1,7 +1,7 @@
 package mailbox.core.service;
 
 import lombok.RequiredArgsConstructor;
-import mailbox.core.domain.Letters;
+import mailbox.core.domain.Letter;
 import mailbox.core.dto.request.LettersUpdateRequestDto;
 import mailbox.core.dto.request.LettersSaveRequestDto;
 import mailbox.core.dto.response.LettersListResponseDto;
@@ -25,14 +25,14 @@ public class LettersService {
 
     @Transactional
     public Long update(Long letterIdx, LettersUpdateRequestDto requestDto){
-        Letters letters = lettersRepository.findById(letterIdx).orElseThrow(() ->
+        Letter letters = lettersRepository.findById(letterIdx).orElseThrow(() ->
                 new IllegalArgumentException("해당 게시글을 찾을 수 없습니다. id = " + letterIdx));
 
         return letterIdx;
     }
 
     public LettersResponseDto findById(Long letterIdx){
-        Letters entity = lettersRepository.findById(letterIdx).orElseThrow(() ->
+        Letter entity = lettersRepository.findById(letterIdx).orElseThrow(() ->
                 new IllegalArgumentException("해당 게시글을 찾을 수 없습니다. id = " + letterIdx));
 
         return new LettersResponseDto(entity);
@@ -49,7 +49,7 @@ public class LettersService {
 
     @Transactional
     public void delete(Long letterIdx){
-        Letters letters = lettersRepository.findById(letterIdx)
+        Letter letters = lettersRepository.findById(letterIdx)
                 .orElseThrow(() -> new IllegalArgumentException("해당 게시글을 찾을 수 없습니다 id: " + letterIdx));
 
         lettersRepository.delete(letters);
