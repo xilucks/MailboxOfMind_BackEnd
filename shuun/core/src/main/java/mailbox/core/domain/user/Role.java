@@ -1,4 +1,4 @@
-package mailbox.core.dto;
+package mailbox.core.domain.user;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

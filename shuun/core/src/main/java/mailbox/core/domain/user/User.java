@@ -1,7 +1,7 @@
-package mailbox.core.domain;
+package mailbox.core.domain.user;
 
 import lombok.*;
-import mailbox.core.dto.Role;
+import mailbox.core.domain.Message;
 
 import java.util.ArrayList;
 import java.util.List;

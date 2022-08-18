@@ -9,12 +9,19 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.Map;
 
 @Controller
 @AllArgsConstructor
 public class BaseController {
+    private static final String authorizationRequestBaseUri = "oauth2/authorization";
+    Map<String, String> oauth2AuthenticationUrls = new HashMap<>();
+    private final ClientRegistrationRepository clientRegistrationRepository;
+
+    private final HttpSession httpSession;
+
 
     @GetMapping("/")
     public String index(){
@@ -26,11 +33,8 @@ public class BaseController {
         return "user";
     }
 
-
-    private static final String authorizationRequestBaseUri = "oauth2/authorization";
-    Map<String, String> oauth2AuthenticationUrls = new HashMap<>();
-    private final ClientRegistrationRepository clientRegistrationRepository;
-
+//    @GetMapping("/login")
+//    public String getLoginP
     @GetMapping("/login")
     public String getLoginPage(Model model) throws Exception {
         Iterable<ClientRegistration> clientRegistrations = null;

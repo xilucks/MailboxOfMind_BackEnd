@@ -21,10 +21,10 @@ public class LetterEmoji {
     private Emoji emoji;
 
     @ManyToOne
-    @JoinColumn(name="letterIdx")
+    @JoinColumn(name="letterIdx",insertable = false, updatable = false)
     private Letter letter;
 
-    @Column(length = 45, nullable = false)
+    @Column(length = 45,insertable = false, updatable = false, nullable = false)
     private Long emojiIdx;
 
     @CreatedDate

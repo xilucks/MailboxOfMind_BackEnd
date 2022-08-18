@@ -13,12 +13,13 @@ public class LetterTag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long letterIdx;
+
     @ManyToOne
-    @JoinColumn(name="tagIdx")
+    @JoinColumn(name="tagIdx2")
     private Tag tag;
 
     @ManyToOne
-    @JoinColumn(name="letterIdx")
+    @JoinColumn(name="letterIdx2")
     private Letter letter;
 
     @Column(length = 45, nullable = false)

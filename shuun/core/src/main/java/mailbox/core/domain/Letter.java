@@ -3,6 +3,7 @@ package mailbox.core.domain;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import mailbox.core.domain.user.User;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
@@ -19,7 +20,7 @@ public class Letter extends BaseTimeEntity{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long letterIdx;
 
-    @Column(length = 45, nullable = false)
+    @Column(length = 45,insertable = false, updatable = false, nullable = false)
     private Long userIdx;
 
     @Column(length = 45, nullable = false)

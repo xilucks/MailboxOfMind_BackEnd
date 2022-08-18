@@ -3,9 +3,8 @@ package mailbox.core.domain;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import mailbox.core.domain.user.User;
 import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
-import org.springframework.stereotype.Service;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -18,13 +17,13 @@ public class Message extends BaseTimeEntity{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long messageIdx;
 
-    @Column(length = 45, nullable = false)
+    @Column(length = 45,insertable = false, updatable = false, nullable = false)
     private Long senderIdx;
 
     @Column(length = 45, nullable = false)
     private Long recipientIdx;
 
-    @Column(length = 45, nullable = false)
+    @Column(length = 45,insertable = false, updatable = false ,nullable = false)
     private Long letterIdx;
 
     @ManyToOne

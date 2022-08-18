@@ -19,7 +19,7 @@ public class Present {
     @JoinColumn(name="letterIdx")
     private Letter letter;
 
-    @Column(length = 45, nullable = false)
+    @Column(length = 45,insertable = false, updatable = false, nullable = false)
     private Long letterIdx;
 
     @Column(length = 45, nullable = false)
