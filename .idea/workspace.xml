@@ -5,20 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5fd933f5-d4b2-4d36-bcdd-b52c0298a12d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/CoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/CoreApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/config/BaseResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/config/BaseResponseStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/controller/LettersApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/controller/LettersApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/domain/BaseTimeEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/domain/Letters.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/domain/Letters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/dto/request/LettersSaveRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/dto/request/LettersSaveRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/dto/request/LettersUpdateRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/dto/request/LettersUpdateRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/dto/response/LettersListResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/dto/response/LettersListResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/dto/response/LettersResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/dto/response/LettersResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/service/LettersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/service/LettersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shuun/core/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shuun/core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/domain/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shuun/core/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shuun/core/src/test/java/mailbox/core/controller/LettersApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/test/java/mailbox/core/controller/LettersApiControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shuun/core/src/test/java/mailbox/core/repository/LettersRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/test/java/mailbox/core/repository/LettersRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,22 +44,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/choisiun/Documents/Programming/MailboxOfMind/backend/MailboxOfMind_BackEnd",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/choisiun/Documents/Programming/MailboxOfMind/backend/MailboxOfMind_BackEnd&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\82102\Documents\UMC_2기\MailboxOfMind_BackEnd\shuun\core\src\main\java\mailbox\core" />
