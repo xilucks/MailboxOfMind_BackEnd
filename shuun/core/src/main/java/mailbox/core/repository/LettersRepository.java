@@ -1,15 +1,15 @@
 package mailbox.core.repository;
 
-import mailbox.core.domain.Letters;
+import mailbox.core.domain.Letter;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface LettersRepository extends JpaRepository<Letters, Long> {
+public interface LettersRepository extends JpaRepository<Letter, Long> {
 
-    @Query("SELECT p FROM Letters p order by p.letterIdx desc ")
-    List<Letters> findAllDesc();
+    @Query("SELECT p FROM Letter p order by p.letterIdx desc ")
+    List<Letter> findAllDesc();
 
 
 }

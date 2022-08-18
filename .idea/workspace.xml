@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5fd933f5-d4b2-4d36-bcdd-b52c0298a12d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shuun/core/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shuun/core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/domain/Letter.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/domain/Letter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/domain/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/dto/request/LettersSaveRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/dto/request/LettersSaveRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/dto/response/LettersListResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/dto/response/LettersListResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/dto/response/LettersResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/dto/response/LettersResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/repository/LettersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/repository/LettersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/service/LettersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/main/java/mailbox/core/service/LettersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shuun/core/src/test/java/mailbox/core/controller/LettersApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/test/java/mailbox/core/controller/LettersApiControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shuun/core/src/test/java/mailbox/core/repository/LettersRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shuun/core/src/test/java/mailbox/core/repository/LettersRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

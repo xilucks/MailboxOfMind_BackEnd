@@ -1,6 +1,6 @@
 package mailbox.core.controller;
 
-import mailbox.core.domain.Letters;
+import mailbox.core.domain.Letter;
 import mailbox.core.dto.request.LettersSaveRequestDto;
 import mailbox.core.repository.LettersRepository;
 import org.assertj.core.api.Assertions;
@@ -42,11 +42,11 @@ public class LettersApiControllerTest {
         //given
         String title = "title";
         String content = "content";
-        Long recipientIdx = 1L;
+        Long recipient = 1L;
         LettersSaveRequestDto requestDto = LettersSaveRequestDto.builder()
                 .title(title)
                 .content(content)
-                .recipientIdx(recipientIdx)
+                .recipient(recipient)
                 .build();
 
         String url = "http://localhost:" + port + "/letters";
@@ -59,7 +59,7 @@ public class LettersApiControllerTest {
         Assertions.assertThat(responseEntity.getBody()).isGreaterThan(0L);
 
 
-        List<Letters> all = lettersRepository.findAll();
+        List<Letter> all = lettersRepository.findAll();
         Assertions.assertThat(all.get(0).getTitle()).isEqualTo(title);
         Assertions.assertThat(all.get(0).getContent()).isEqualTo(content);
     }
