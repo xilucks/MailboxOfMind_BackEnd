@@ -14,12 +14,14 @@ public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long userIdx;
+
+
 
     @Column(nullable = false)
     private String name;
 
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String email;
 
     @Enumerated(EnumType.STRING)
