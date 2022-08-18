@@ -3,6 +3,8 @@ package mailbox.core.domain;
 import lombok.*;
 import mailbox.core.dto.Role;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -16,7 +18,11 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userIdx;
 
+    @OneToMany(mappedBy = "user")
+    private List<Message> messages = new ArrayList<>();
 
+    @OneToMany(mappedBy = "user")
+    private List<Letter> letters = new ArrayList<>();
 
     @Column(nullable = false)
     private String name;

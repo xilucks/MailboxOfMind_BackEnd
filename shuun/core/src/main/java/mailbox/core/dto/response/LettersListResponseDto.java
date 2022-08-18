@@ -1,16 +1,17 @@
 package mailbox.core.dto.response;
 
-import mailbox.core.domain.Letters;
+import mailbox.core.domain.Letter;
 
 public class LettersListResponseDto {
     private Long letterIdx;
     private String title;
     private String content;
-    private Long recipientIdx;
+    private Long recipient;
 
-    public LettersListResponseDto(Letters entity){
+    public LettersListResponseDto(Letter entity){
         this.letterIdx = entity.getLetterIdx();
         this.title = entity.getTitle();
-        this.recipientIdx = entity.getRecipientIdx();
+        this.content = entity.getContent();
+        this.recipient = entity.getRecipient();
     }
 }

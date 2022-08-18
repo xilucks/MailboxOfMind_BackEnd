@@ -3,27 +3,27 @@ package mailbox.core.dto.request;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import mailbox.core.domain.Letters;
+import mailbox.core.domain.Letter;
 
 @Getter
 @NoArgsConstructor
 public class LettersSaveRequestDto {
     private String title;
     private String content;
-    private Long recipientIdx;
+    private Long recipient;
 
     @Builder
-    public LettersSaveRequestDto(String title, String content, Long recipientIdx){
+    public LettersSaveRequestDto(String title, String content, Long recipient){
         this.title = title;
         this.content = content;
-        this.recipientIdx = recipientIdx;
+        this.recipient = recipient;
     }
 
-    public Letters toEntity(){
-        return Letters.builder()
+    public Letter toEntity(){
+        return Letter.builder()
                 .title(title)
                 .content(content)
-                .recipientIdx(recipientIdx)
+                .recipient(recipient)
                 .build();
     }
 

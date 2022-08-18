@@ -37,6 +37,10 @@ public class Letter extends BaseTimeEntity{
     @OneToMany(mappedBy = "letter")
     private List<Message> messages = new ArrayList<>();
 
+    @ManyToOne
+    @JoinColumn(name="userIdx")
+    private User user;
+
     @Column(length = 45, nullable = false)
     private String title;
 
@@ -55,14 +59,13 @@ public class Letter extends BaseTimeEntity{
     @Column(length = 10, nullable = false)
     private String status;
 
-
     @CreatedDate
     @Column(updatable = false)
     private LocalDateTime createDate;
 
 
     @Builder
-    public Letter(String title, String content, String sender, Long recipientName, String destination, String presentStatus){
+    public Letter(String title, String content, String sender, Long recipient, String destination, String presentStatus){
         this.title = title;
         this.content = content;
         this.sender = sender;
